@@ -1,2 +1,2 @@
 start:
-	python app/manage.py runserver
+	python manage.py runserver
