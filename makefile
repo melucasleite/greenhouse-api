@@ -1,4 +1,4 @@
 start:
-	python manage.py runserver
+	cd backend && python manage.py runserver
 prod:
-	gunicorn app.wsgi
+	gunicorn --pythonpath backend app.wsgi
