@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-rp%_k9-k*@%m&11&d)7j=%_u--5v+1iq5!9$8d(t5e)g2k2g7q
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'infra-experiment.herokuapp.com'
+    'greenhouse-api.herokuapp.com'
 ]
 
 
