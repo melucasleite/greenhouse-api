@@ -24,16 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      - name: Django Test CI
-        # You may pin to the exact commit or the version.
-        # uses: UKnowWhoIm/django-test-action@6d8e2de46b5da6007106ebe443de99416ec238d0
-        uses: UKnowWhoIm/django-test-action@v0.6.1
-
       - name: Generate Report
         run: |
+          pip install -r requirements.txt
           pip install coverage
+          export DJANGO_SETTINGS_MODULE=app.settings
           coverage run -m unittest
-      
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v1
